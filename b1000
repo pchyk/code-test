@@ -1,0 +1,12 @@
+#1트
+a,b = 1,2
+print(a+b)
+#입력받는다 라는 말의 의미 해석 못함
+
+#2트
+a,b = input().split()
+print(int(a)+int(b))
+
+#답
+a,b = map(int, input().split())
+print(a+b)
