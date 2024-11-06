@@ -1,0 +1,7 @@
+#1트
+A, B, C = map(int,input().split())
+print(A+B+C)
+
+#2트
+print(sum(map(int,input().split())))
+#sum sum sum
