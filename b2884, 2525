@@ -1,0 +1,60 @@
+#알람 맞추기
+
+#1트
+H,M = map(int, input().split())
+if M >=45:
+    print(H, M-45)
+else:
+    if H == 0:
+        print(23, M+15)
+    else:
+        print(H-1, M+15)
+
+#2트
+H, M = map(int,input().split())
+if M - 45 < 0:
+    H -= 1
+M -= 45
+
+print(H % 24, M % 60) # %를 써서 값이 60인 경우 해결
+
+'''
+입력
+첫째 줄에는 현재 시각이 나온다.
+현재 시각은 시 A (0 ≤ A ≤ 23) 와 분 B (0 ≤ B ≤ 59)가 정수로 빈칸을 사이에 두고 순서대로 주어진다.
+두 번째 줄에는 요리하는 데 필요한 시간 C (0 ≤ C ≤ 1,000)가 분 단위로 주어진다.
+
+출력
+첫째 줄에 종료되는 시각의 시와 분을 공백을 사이에 두고 출력한다.
+(단, 시는 0부터 23까지의 정수, 분은 0부터 59까지의 정수이다.
+디지털 시계는 23시 59분에서 1분이 지나면 0시 0분이 된다.)
+'''
+
+#1트
+'''
+A,B = map(int,input().split())
+C = int(input())
+if B + C > 60:
+    print((A+(B+C)//60)%24, (B+C)%60)
+else:
+    print(A, B+C)'''
+
+#2트
+'''
+A,B = map(int,input().split())
+C = int(input())
+D = B + C
+if D >= 60:
+    A += D//60
+print(A%24, D%60)'''
+
+#3트
+'''
+m,h=map(int,input().split())
+h+=int(input())
+print((m+h//60)%24,h%60)'''
+
+#4트
+A, B = map(int, input().split())
+C = int(input())
+print((A+(B+C)//60)%24, (B+C)%60) #그냥 %를 쓰면 60보다 큰지 안큰지 생각 안해도 됨
